@@ -3,7 +3,10 @@
 struct station {
     int waiting_passengers,empty_seats,onboard_passengers;
 
+    // mutex lock
     pthread_mutex_t lock ;
+
+    //condition varibles
     pthread_cond_t wating_for_train;
     pthread_cond_t on_board;
 };
